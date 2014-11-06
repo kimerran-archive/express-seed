@@ -1,0 +1,9 @@
+{
+	"name" : "kimerran-express-seed",
+	"version" : "0.0.1",
+	"description" : "Seed project for express projects",
+	"dependencies" : {
+		"express" : "^4.10.1",
+		"ejs" : "^1.0.0"
+	}
+}
