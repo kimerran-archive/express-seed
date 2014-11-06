@@ -1,20 +1,13 @@
 var express = require('express');
 var app 	= express();
-var port 	= 8888;
+var port 	= 8889;
 
-app.set('view engine', 'ejs');
-app.set('views', './views');
+module.exports.app 		= app;
+module.exports.express 	= express;
 
-app.use('/js', express.static(__dirname + '/public/js'));
-app.use('/css', express.static(__dirname + '/public/css'));
+routes = require('./routes');
+config = require('./config');
 
-app.get('/', function(req,res){
-	res.render('home/index', {
-		title: 'Welcome to my express seed',
-		message: 'Oh! Welcome there!'
-	});
-});
-
-app.listen(port,function () {
+app.listen(port, function () {
 	console.log('Listening on HTTP port ' + port);
 });

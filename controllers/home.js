@@ -4,3 +4,7 @@ exports.index = function(req,res) {
 		message: 'Oh! Welcome there!'
 	});
 }
+
+exports.hello = function (req,res) {
+	res.send('Just saying hello!');
+}
